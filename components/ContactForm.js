@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function ContactForm() {
+  const [number, setNumber] = useState(1);
   return (
     <form name="contact" action="/success" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
@@ -7,12 +10,22 @@ export default function ContactForm() {
         <input type="text" name="name" id="yourname" />
       </p>
       <p>
-        <label htmlFor="youremail">Your Email: </label>{' '}
+        <label htmlFor="youremail">Your Email: </label>{" "}
         <input type="email" name="email" id="youremail" />
       </p>
       <p>
-        <label htmlFor="yourmessage">Message: </label>
-        <textarea name="message" id="yourmessage"></textarea>
+        <label htmlFor="attendees">Number of attendees: </label>
+        <p style={{ }}
+        >Due to covid-19, there is a currently a limit of three people per meeting room</p>
+        <input
+          type="number"
+          min="1"
+          max="3"
+          name="attendees"
+          id="attendees"
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+        />
       </p>
       <p>
         <button type="submit">Send</button>
@@ -45,5 +58,5 @@ export default function ContactForm() {
         }
       `}</style>
     </form>
-  )
+  );
 }
