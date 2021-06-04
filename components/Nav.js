@@ -1,13 +1,16 @@
-import Link from 'next/link'
+
 
 export default function Nav() {
   return (
     <nav className="nav" role="navigation" aria-label="main navigation">
+      <div className="wrapper">
+        <img src="./logo.svg" style={{width:"200px", height: "auto", padding:"0.5em"}} />
+      </div>
 
       <style jsx>{`
         nav {
           width: 100%;
-          height: 100px;
+          height: 100%;
           border-bottom: 1px solid #eaeaea;
           display: flex;
           justify-content: center;
@@ -16,15 +19,7 @@ export default function Nav() {
           font-size: 1.3rem;
           text-align: center;
         }
-        nav a {
-          margin-right: 20px;
-          color: #00a395;
-          text-decoration: none;
-        }
-        nav a:hover {
-          text-decoration: underline;
-        }
       `}</style>
     </nav>
-  )
+  );
 }

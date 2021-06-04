@@ -6,17 +6,31 @@ export default function ContactForm() {
     <form name="contact" action="/success" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
       <p>
-        <label htmlFor="yourname">Your Name:</label>
+        <label htmlFor="yourname">Your Name</label>
         <input type="text" name="name" id="yourname" />
       </p>
       <p>
-        <label htmlFor="youremail">Your Email: </label>{" "}
+        <label htmlFor="youremail">Your Email</label>
         <input type="email" name="email" id="youremail" />
       </p>
       <p>
-        <label htmlFor="attendees">Number of attendees: </label>
-        <p style={{ }}
-        >Due to covid-19, there is a currently a limit of three people per meeting room</p>
+        <label htmlFor="thedate">Date</label>
+        <input type="date" name="date" id="thedate" />
+      </p>
+      <p>
+        <label htmlFor="starttime">Start</label>
+        <input type="time" name="start" id="starttime"  />
+      </p>
+      <p>
+        <label htmlFor="endtime">End</label>
+        <input type="time" name="end" id="endtime" />
+      </p>
+      <p>
+        <label htmlFor="attendees">Number of attendees</label>
+        <p style={{ fontSize: "0.75em" }}>
+          Due to covid-19, there is a currently a limit of three people per
+          meeting room
+        </p>
         <input
           type="number"
           min="1"
@@ -32,7 +46,7 @@ export default function ContactForm() {
       </p>
       <style jsx>{`
         label {
-          font-size: 0.8rem;
+          font-size: 1em;
         }
 
         input,
@@ -50,10 +64,10 @@ export default function ContactForm() {
         }
 
         button {
-          padding: 20px;
+          padding: 0.5em 1em;
           background: black;
           color: white;
-          border-radius: 10px;
+          border-radius: 4px;
           font-size: 1.3rem;
         }
       `}</style>
