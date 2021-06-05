@@ -54,7 +54,7 @@ export default function ContactForm() {
         input,
         textarea {
           width: 100%;
-          min-height: 2em;
+          min-height: 50px;
           border: none;
           font-size: 1em;
           background-color: #f7f7f7;
@@ -82,12 +82,14 @@ export default function ContactForm() {
           text-align: center;
           -webkit-appearance: textfield;
           -moz-appearance: textfield;
-          min-height: 2em;
+          min-height: 50px;
           display: block;
+          padding: 1em;
         }
 
         input::-webkit-date-and-time-value {
-          min-height: 2em;
+          min-height: 50px;
+          padding: 1em;
         }
 
         .input-wrapper {
@@ -98,7 +100,7 @@ export default function ContactForm() {
           margin: 2em 0;
         }
 
-        .input-wrapper:first-of-type{
+        .input-wrapper:first-of-type {
           margin-top: 0;
         }
         @media (max-width: 600px) {
