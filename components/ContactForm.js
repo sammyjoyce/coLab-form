@@ -54,7 +54,8 @@ export default function ContactForm() {
         input,
         textarea {
           width: 100%;
-          height: 50px;
+          min-height: 50px;
+          max-height: 50px;
           border: none;
           font-size: 1em;
           background-color: #f7f7f7;
@@ -82,13 +83,15 @@ export default function ContactForm() {
           text-align: center;
           -webkit-appearance: textfield;
           -moz-appearance: textfield;
-          height: 50px;
+          min-height: 50px;
+          max-height: 50px;
           display: block;
           padding: 1em;
         }
 
         input::-webkit-date-and-time-value {
-          height: 50px;
+          min-height: 50px;
+          max-height: 50px;
           padding: 1em;
         }
 
