@@ -45,22 +45,31 @@ export default function Contact() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          max-width: 600px;
+          max-width: 369px;
         }
 
         a {
           text-decoration: none;
         }
+
+        @media (max-width: 600px) {
+          main {
+            margin: 3%;
+          }
+        }
       `}</style>
 
       <style jsx global>{`
+        @import url("https://use.typekit.net/uuv2vhl.css");
+
         html,
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: jaf-domus, -apple-system, BlinkMacSystemFont, Segoe UI,
+            Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+            Helvetica Neue, sans-serif;
+          font-weight: 300;
         }
 
         * {
