@@ -82,12 +82,11 @@ export default function ContactForm() {
           -webkit-appearance: textfield;
           -moz-appearance: textfield;
           min-height: 2em;
-          height: 100%;
           display: block;
         }
 
         input::-webkit-date-and-time-value {
-          height: 2em;
+          min-height: 2em;
         }
 
         .input-wrapper {
