@@ -14,6 +14,20 @@ export default function ContactForm() {
         <input type="email" name="email" id="youremail" />
       </div>
       <div className="input-wrapper">
+        <label htmlFor="attendees">Number of attendees</label>
+
+        <input
+          type="number"
+          min="1"
+          max="3"
+          name="attendees"
+          id="attendees"
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+        />
+      </div>
+
+      <div className="input-wrapper">
         <label htmlFor="thedate">Date</label>
         <input type="date" name="date" id="thedate" />
       </div>
@@ -25,26 +39,17 @@ export default function ContactForm() {
         <label htmlFor="endtime">End</label>
         <input type="time" name="end" id="endtime" />
       </div>
-      <div className="input-wrapper">
-        <label htmlFor="attendees">Number of attendees</label>
-        <p style={{ fontSize: "0.75em" }}>
-          Due to covid-19, there is a currently a limit of three people per
-          meeting room
-        </p>
-        <input
-          type="number"
-          min="1"
-          max="3"
-          name="attendees"
-          id="attendees"
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
-        />
-      </div>
-      <p>
-        <button type="submit">Send</button>
+      <p className="note">
+        Due to covid-19, there is a currently a limit of three people per
+        meeting room.
       </p>
+      <button type="submit">Send</button>
       <style jsx>{`
+        form {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1em;
+        }
         label {
           font-size: 1.3em;
           text-align: center;
@@ -78,6 +83,7 @@ export default function ContactForm() {
           border-radius: 1em;
           border-color: #000;
           margin-top: 1em;
+          grid-column: 1 / span 2;
         }
         input:matches([type="date"], [type="time"], [type="datetime-local"], [type="month"], [type="week"]) {
           text-align: center;
@@ -98,15 +104,27 @@ export default function ContactForm() {
           align-content: center;
           display: flex;
           flex-direction: column;
-          margin: 2em 0;
         }
 
-        .input-wrapper:first-of-type {
-          margin-top: 0;
+        .note {
+          font-size: 0.75em;
+          grid-column: 1 / span 2;
         }
+
         @media (max-width: 600px) {
           form {
             margin: 3%;
+            grid-template-columns: 1fr;
+          }
+          .input-wrapper:first-of-type {
+            margin-top: 0;
+          }
+          button {
+            grid-column: 1 / span 1;
+          }
+          .note {
+            font-size: 0.75em;
+            grid-column: 1 / span 1;
           }
         }
       `}</style>
