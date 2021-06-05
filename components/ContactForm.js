@@ -76,6 +76,7 @@ export default function ContactForm() {
           width: 100%;
           border-radius: 1em;
           border-color: #000;
+          margin-top: 1em;
         }
         input:matches([type="date"], [type="time"], [type="datetime-local"], [type="month"], [type="week"]) {
           text-align: center;
@@ -97,6 +98,9 @@ export default function ContactForm() {
           margin: 2em 0;
         }
 
+        .input-wrapper:first-of-type{
+          margin-top: 0;
+        }
         @media (max-width: 600px) {
           form {
             margin: 3%;
