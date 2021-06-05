@@ -79,7 +79,11 @@ export default function ContactForm() {
         }
         input:matches([type="date"], [type="time"], [type="datetime-local"], [type="month"], [type="week"]) {
           text-align: center;
+          -webkit-appearance: textfield;
+          -moz-appearance: textfield;
+          min-height: 2em;
         }
+
         .input-wrapper {
           box-sizing: border-box;
           align-content: center;
@@ -88,9 +92,11 @@ export default function ContactForm() {
           margin: 2em 0;
         }
 
-        @media (max-width: 600px) { form{
-          margin: 3%;
-        }}
+        @media (max-width: 600px) {
+          form {
+            margin: 3%;
+          }
+        }
       `}</style>
     </form>
   );
