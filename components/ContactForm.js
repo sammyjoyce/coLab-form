@@ -86,6 +86,10 @@ export default function ContactForm() {
           display: block;
         }
 
+        input::-webkit-date-and-time-value {
+          height: 2em;
+        }
+
         .input-wrapper {
           box-sizing: border-box;
           align-content: center;
