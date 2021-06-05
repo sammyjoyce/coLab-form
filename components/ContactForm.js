@@ -86,13 +86,11 @@ export default function ContactForm() {
           min-height: 50px;
           max-height: 50px;
           display: block;
-          padding: 1em;
         }
 
         input::-webkit-date-and-time-value {
           min-height: 50px;
           max-height: 50px;
-          padding: 1em;
         }
 
         .input-wrapper {
