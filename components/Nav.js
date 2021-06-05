@@ -4,14 +4,17 @@ export default function Nav() {
   return (
     <nav className="nav" role="navigation" aria-label="main navigation">
       <div className="wrapper">
-        <img src="./logo.svg" style={{width:"200px", height: "auto", padding:"0.5em"}} />
+        <img
+          src="./logo.svg"
+          style={{ width: "200px", height: "auto", padding: "0.5em" }}
+        />
       </div>
 
       <style jsx>{`
         nav {
           width: 100%;
           height: 100%;
-          border-bottom: 1px solid #eaeaea;
+          border-bottom: 1px solid #f5f5f7;
           display: flex;
           justify-content: center;
           align-items: center;

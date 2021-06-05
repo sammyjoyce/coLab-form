@@ -55,6 +55,10 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
+
+        .title{
+          font-size: 1.6em;
+        }
       `}</style>
     </div>
   );
