@@ -17,9 +17,8 @@ export default function Contact() {
       <main>
         <Header text="Request Submitted" />
         <p>
-          This booking request is not a guarentee of a booking. <br />
-          <br />
-          Please wait for a confirmation email. If there is not availability
+          This booking request is not a guarantee of a booking. <br /> <br />
+          Please wait for a confirmation email. If there is no availability
           during your requested time, you will be contacted to organise an
           alternative.
           <br />
