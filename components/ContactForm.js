@@ -3,8 +3,8 @@ import { useState } from "react";
 export default function ContactForm() {
   const [number, setNumber] = useState(1);
   return (
-    <form name="contact" action="/success" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
+    <form name="booking" action="/success" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="booking" />
       <div className="input-wrapper">
         <label htmlFor="yourname">Your Name</label>
         <input type="text" name="name" id="yourname" />
