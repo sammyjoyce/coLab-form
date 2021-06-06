@@ -71,7 +71,7 @@ export default function ContactForm() {
 
         input:focus,
         textarea:focus {
-          outline: 1px dotted #d6d6d6;
+          background-color: #dedede;
         }
 
         button {
