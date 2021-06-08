@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [number, setNumber] = useState(1);
+  const [placeholder, setPlaceholder] = useState("");
   return (
     <form
       name="meeting-room-booking"
@@ -24,7 +25,7 @@ export default function ContactForm() {
         <input
           type="number"
           min="1"
-          max="3"
+          max="6"
           name="attendees"
           id="attendees"
           value={number}
@@ -44,9 +45,15 @@ export default function ContactForm() {
         <label htmlFor="endtime">End</label>
         <input type="time" name="end" id="endtime" />
       </div>
+      <div className="input-wrapper full">
+        <label htmlFor="text">Request Notes</label>
+        <input type="text" name="text" id="text"  value={placeholder}
+          onChange={(e) => setPlaceholder(e.target.value)}/>
+      </div>
+
       <p className="note">
         Due to covid-19, there is a currently a limit of three people per
-        meeting room.
+        meeting room, or 6 in the boardroom.
       </p>
       <button type="submit">Send</button>
       <style jsx>{`
@@ -116,6 +123,11 @@ export default function ContactForm() {
           grid-column: 1 / span 2;
         }
 
+        .full {
+
+          grid-column: 1 / span 2;
+        }
+
         @media (max-width: 600px) {
           form {
             margin: 3%;
@@ -129,6 +141,10 @@ export default function ContactForm() {
           }
           .note {
             font-size: 0.75em;
+            grid-column: 1 / span 1;
+          }
+
+          .full {
             grid-column: 1 / span 1;
           }
         }
