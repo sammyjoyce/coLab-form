@@ -47,8 +47,13 @@ export default function ContactForm() {
       </div>
       <div className="input-wrapper full">
         <label htmlFor="text">Request Notes</label>
-        <input type="text" name="text" id="text"  value={placeholder}
-          onChange={(e) => setPlaceholder(e.target.value)}/>
+        <input
+          type="text"
+          name="text"
+          id="text"
+          value={placeholder}
+          onChange={(e) => setPlaceholder(e.target.value)}
+        />
       </div>
 
       <p className="note">
@@ -97,6 +102,10 @@ export default function ContactForm() {
           margin-top: 1em;
           grid-column: 1 / span 2;
         }
+
+        button:hover {
+          cursor: pointer;
+        }
         input:matches([type="date"], [type="time"], [type="datetime-local"], [type="month"], [type="week"]) {
           text-align: center;
           -webkit-appearance: textfield;
@@ -124,7 +133,6 @@ export default function ContactForm() {
         }
 
         .full {
-
           grid-column: 1 / span 2;
         }
 
