@@ -1,13 +1,15 @@
-
+import Link from "next/link";
 
 export default function Nav() {
   return (
     <nav className="nav" role="navigation" aria-label="main navigation">
       <div className="wrapper">
-        <img
-          src="./logo.svg"
-          style={{ width: "200px", height: "auto", padding: "0.5em" }}
-        />
+        <Link href="/">
+          <img
+            src="./logo.svg"
+            style={{ width: "200px", height: "auto", padding: "0.5em" }}
+          />
+        </Link>
       </div>
 
       <style jsx>{`
