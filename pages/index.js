@@ -62,6 +62,12 @@ export default function Home() {
           align-items: center;
           max-width: 600px;
         }
+        @media (max-width: 600px) {
+          .container {
+            margin: 3%;
+            grid-template-columns: 1fr;
+          }
+        }
       `}</style>
 
       <style jsx global>{`
