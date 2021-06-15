@@ -1,8 +1,8 @@
 import Link from "next/link";
-import useLocalStorage from "../utils/use-local-storage";
+import { useState } from "react";
 
 export default function Blurb() {
-  const [hide, hideSetter] = useLocalStorage("hide", "false");
+  const [hide, hideSetter] = useState("false");
   const onClick = () => hideSetter(false);
   return (
     <main>

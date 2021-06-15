@@ -24,6 +24,9 @@ export default function Nav() {
           font-size: 1.3rem;
           text-align: center;
         }
+        img:hover {
+          cursor: pointer;
+        }
       `}</style>
     </nav>
   );
