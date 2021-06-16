@@ -11,7 +11,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>coLab 2908 Access</title>
-        <link rel="icon" href="/favicon.ico" />
+        <ink rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
       <main>
