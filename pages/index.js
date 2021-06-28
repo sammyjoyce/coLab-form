@@ -16,9 +16,9 @@ export default function Home() {
       <Nav />
       <main>
         <div>
-          <Link href="/coffee">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScIHhz1SVqtFuYjuBAyAYKTvgS2fa-7uoECTiUkLs5-0ceShA/viewform">
             <button>Coffee Order</button>
-          </Link>
+          </a>
           <Link href="/room">
             <button>Meeting Room Booking</button>
           </Link>
